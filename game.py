@@ -23,10 +23,8 @@ def start_game(event):
         file1.close()
         score.configure(text="Score: 00\n\nHighscore: " + highscore)
         canvas.delete("all")
-        BALL_COLOR = ["red", "yellow", "green"]
-        BRICK_COLOR = ["PeachPuff3", "dark slate gray", "rosy brown", "light goldenrod yellow", "turquoise3", "salmon",
-                       "light steel blue", "dark khaki", "pale violet red", "orchid", "tan", "MistyRose2",
-                       "DodgerBlue4", "wheat2", "RosyBrown2", "bisque3", "DarkSeaGreen1"]
+        BALL_COLOR = ["blue", "deep sky blue", "lawn green"]
+        BRICK_COLOR = ["orange red", "chocolate", "tomato", "red"]
         random.shuffle(BALL_COLOR)
         # Colour of the paddle
         paddle = Paddle(canvas, "blue")
@@ -95,6 +93,6 @@ def start_game(event):
 root.bind_all("<Return>", start_game)
 root.bind_all("<Left>", start_game)
 root.bind_all("<Right>", start_game)
-canvas.create_text(250, 250, text="Press Enter to start Game!!", fill="red", font="Consolas 18")
+canvas.create_text(250, 250, text="Press Enter Right or Left to start Game!!", fill="red", font="Consolas 18")
 root.mainloop()
         
